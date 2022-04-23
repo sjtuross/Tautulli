@@ -83,7 +83,6 @@ jobs:
             BUILD_DATE=${{ steps.prepare.outputs.build_date }}
           tags: |
             ${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.tag }}
-            ghcr.io/${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.tag }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
